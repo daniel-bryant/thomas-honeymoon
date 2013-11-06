@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Simplicity Itself"/>
+
+    <title>Mike and Tracy's Big Fat Greek Honeymoon</title>
+
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+    </link>
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+    </style>
+    <!-- See http://twitter.github.com/bootstrap/scaffolding.html#responsive -->
+    <link href="/resources/css/bootstrap-responsive.min.css" rel="stylesheet">
+    </link>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <link href="/resources/css/custom.css" rel="stylesheet">
+    </link>
+    
+    <!-- begin blueimp -->
+    <link rel="stylesheet" href="/resources/blueimp/css/blueimp-gallery.min.css">
+    </link>
+    <!-- end blueimp -->
+</head>
+<body>
+<!-- {!begin layout} -->
+<div th:include="layout :: head"></div>
+<!-- {!end layout} -->
+
+<div class="container">
+	<div class="row">
+	    <!-- <div th:include="layout :: left"></div> -->
+	    <div class="span10 offset1">
+	        <!-- <h3>Yummy</h3>
+	
+	        <p>
+	            Welcome to the home of all things Noodle
+	        </p>
+	
+	        <p>
+	            <a class="btn btn-primary btn-large" href="http://www.simplicityitself.com/">Learn more about us</a>
+	            <a th:if="${basket.size &gt; 0}"
+	               class="btn btn-primary btn-large"
+	               th:href="@{/showBasket}">Look in your basket</a>
+	        </p> -->
+	        
+	        <!-- begin blueimp -->
+			<!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
+			<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel" style="padding-bottom: 330px">
+    			<div class="slides"></div>
+    			<h3 class="title"></h3>
+    			<a class="prev">‹</a>
+    			<a class="next">›</a>
+    			<a class="play-pause"></a>
+    			<ol class="indicator"></ol>
+			</div>
+			<!-- end blueimp -->
+	        
+	        <div id="links">
+	        	<a href="/resources/img/home1.jpg" title="home"></a>
+	        	<a href="/resources/img/home2.jpg" title="home"></a>
+	        	<a href="/resources/img/home3.jpg" title="home"></a>
+	        </div>
+	
+	    </div>
+    </div>
+
+    <div class="row">
+    	<div class="span1">
+    	</div>
+    
+        <div class="span10">
+
+            <div id="message" class="alert alert-info">
+                Select from the menu. Currently your basket contains <em th:text="${basket.size}">SOME</em> item(s).
+            </div>
+
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Cost</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr th:each="item,status : ${menuItems}">
+                    <td th:text="${item.name}"></td>
+                    <td th:text="${item.description}"></td>
+                    <td th:text="${item.cost}"></td>
+                    <td>
+                        <form action="/addToBasket" method="POST">
+                            <input id="id" name="id" type="hidden" th:value="${item.id}"/>
+                            <input id="name" name="name" type="hidden" th:value="${item.name}"/>
+                            <input id="description" name="description" type="hidden"
+                                   th:value="${item.description}"/>
+                            <input id="cost" name="cost" type="hidden" th:value="${item.cost}"/>
+                            <input type="submit" value="Add to basket"/>
+                        </form>
+                    </td>
+
+                </tr>
+                <!-- This example data will be removed by thmyeleafe during processing and replaced with the rows generated above -->
+                <tr th:remove="all">
+                    <td>Yummy1</td>
+                    <td>Noodles, with Cheese</td>
+                    <td>$13.99</td>
+                    <td>15</td>
+                </tr>
+                </tbody>
+            </table>
+            <div th:include="layout :: foot"></div>
+
+
+        </div>
+        
+        <div class="span1">
+        </div>
+    </div>
+</div>
+<!-- begin blueimp -->
+<script src="/resources/blueimp/js/blueimp-gallery.min.js"></script>
+<script>
+blueimp.Gallery(
+    document.getElementById('links').getElementsByTagName('a'),
+    {
+        container: '#blueimp-gallery-carousel',
+        carousel: true
+    }
+);
+</script>
+<!-- end blueimp -->
+</body>
+</html>

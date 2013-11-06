@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="2.0">
+	<wb-module deploy-name="honeymoon">
+		<property name="context-root" value="honeymoon"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/resources"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="src/main/java"/>
+		<wb-resource deploy-path="/" source-path="src/main/webapp"/>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/antlr/antlr/2.7.7/jar/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.mongodb/mongo-java-driver/2.10.1/jar/9e2c2835b0126a48183ed42129e53b6eb6e259b/mongo-java-driver-2.10.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.thymeleaf/thymeleaf/2.0.18/jar/32cd6b805e8fb862e85e2f26ebbb310d91694b9a/thymeleaf-2.0.18.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.ow2.asm/asm/4.0/jar/659add6efc75a4715d738e73f07505246edf4d66/asm-4.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework/spring-jdbc/3.2.3.RELEASE/jar/426d245731dca3315fe421300db6316d509c5d85/spring-jdbc-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.jboss.logging/jboss-logging/3.1.1.GA/jar/7fb1a7eb7ff1d15cac1802510fee65c7ca31a869/jboss-logging-3.1.1.GA.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework.data/spring-data-commons/1.6.1.RELEASE/jar/772e2daa59003ae968c5738077b3966e16fff02d/spring-data-commons-1.6.1.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/ognl/ognl/3.0.6/jar/a3665cf8e3426686ee751790f3d1e1ec5705e9dc/ognl-3.0.6.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework/spring-web/3.2.3.RELEASE/jar/833c5e9a60f82209a3f669a5026dfa8de57c1df3/spring-web-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/aopalliance/aopalliance/1.0/jar/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/log4j/log4j/1.2.17/bundle/5af35056b4d257e4b64b9e8069c0746e8b08629f/log4j-1.2.17.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework.data/spring-data-mongodb/1.3.1.RELEASE/jar/f48721509bda3ea63d7c2fac6ca9f6a2e7293af7/spring-data-mongodb-1.3.1.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework/spring-tx/3.2.3.RELEASE/jar/40d76c7b27769a3235547bd329d20878df343b19/spring-tx-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.javassist/javassist/3.16.1-GA/jar/315891b371395271977af518d4db5cee1a0bc9bf/javassist-3.16.1-GA.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.1.Final/jar/3306a165afa81938fc3d8a0948e891de9f6b192b/hibernate-jpa-2.0-api-1.0.1.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/xml-apis/xml-apis/1.0.b2/jar/3136ca936f64c9d68529f048c2618bd356bf85c9/xml-apis-1.0.b2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.thymeleaf/thymeleaf-spring3/2.0.18/jar/1595570131f809c2eed938f36e09881d5ae9f31c/thymeleaf-spring3-2.0.18.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/cglib/cglib/3.0/jar/a8149c14534eefa763a16534507dcbaec6eb0cf8/cglib-3.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.jboss.spec.javax.transaction/jboss-transaction-api_1.1_spec/1.0.0.Final/jar/2ab6236535e085d86f37fd97ddfdd35c88c1a419/jboss-transaction-api_1.1_spec-1.0.0.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.hibernate/hibernate-entitymanager/4.0.1.Final/jar/c582284b9faaa35f92462181541c5f2d4ca9eb38/hibernate-entitymanager-4.0.1.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework/spring-webmvc/3.2.3.RELEASE/jar/6d6d1b53c53dbefd0d8c15f2d5c194ced1f8d53c/spring-webmvc-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.slf4j/slf4j-api/1.7.5/jar/6b262da268f8ad9eff941b25503a9198f0a0ac93/slf4j-api-1.7.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework.security/spring-security-config/3.2.0.M2/jar/a22057105721cec1d895379009fb6a4c430bdc8a/spring-security-config-3.2.0.M2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.hibernate.common/hibernate-commons-annotations/4.0.1.Final/jar/78bcf608d997d0529be2f4f781fdc89e801c9e88/hibernate-commons-annotations-4.0.1.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/commons-logging/commons-logging/1.1.1/jar/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/com.h2database/h2/1.3.173/jar/3d9cc700d2c6b0b7a9bb59bd2b850e6518b6c209/h2-1.3.173.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.slf4j/slf4j-log4j12/1.7.5/jar/6edffc576ce104ec769d954618764f39f0f0f10d/slf4j-log4j12-1.7.5.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework/spring-core/3.2.3.RELEASE/jar/accdd65db57e79e49f2af037bb76f5a55a580f00/spring-core-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework.data/spring-data-jpa/1.3.4.RELEASE/jar/a0e46521691c6de2a703c09991ee609625cb5b6e/spring-data-jpa-1.3.4.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.hibernate/hibernate-core/4.0.1.Final/jar/9e1b7e06d8148394632bcaeb7a5f68748c69dce4/hibernate-core-4.0.1.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/commons-collections/commons-collections/3.2.1/jar/761ea405b9b37ced573d2df0d1e3a4e0f9edc668/commons-collections-3.2.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/javax.validation/validation-api/1.1.0.Final/jar/8613ae82954779d518631e05daa73a6a954817d5/validation-api-1.1.0.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework/spring-orm/3.1.4.RELEASE/jar/bd00cdb59403954d75bf5d4bbf4c5d62d884d38e/spring-orm-3.1.4.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework/spring-context/3.2.3.RELEASE/jar/12ad5920647556704f79cc579d4e133430741c5/spring-context-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework.security/spring-security-core/3.2.0.M2/jar/c5e22a9394bcbf4b39090ff9e643563b8c8920ce/spring-security-core-3.2.0.M2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework/spring-expression/3.2.3.RELEASE/jar/51e4c94a79892c0a2d15c5efda8c5b336ebf5c37/spring-expression-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/com.fasterxml/classmate/0.8.0/bundle/27426d4fca7adcda34f536e32d6189566a2929f0/classmate-0.8.0.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.hibernate/hibernate-validator/5.0.1.Final/jar/542a45c94ff8a7551779caaaffd3857d643b9087/hibernate-validator-5.0.1.Final.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.aspectj/aspectjrt/1.7.2/jar/2704a4284193598dd42f1dd4ff1ea3e757c875e9/aspectjrt-1.7.2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/commons-io/commons-io/2.4/jar/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/dom4j/dom4j/1.6.1/jar/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.slf4j/jcl-over-slf4j/1.7.1/jar/a11c000cf26e42ba30b7fb5bd60630a57783fe2d/jcl-over-slf4j-1.7.1.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework/spring-aop/3.2.3.RELEASE/jar/a70bec95e45a29cad126d250699d0ed0fedfe28a/spring-aop-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework.security/spring-security-web/3.2.0.M2/jar/d08a401f0a82c213695dc92f984cc4979a10f17c/spring-security-web-3.2.0.M2.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+		<dependent-module deploy-path="/WEB-INF/lib" handle="module:/classpath/lib//home/daniel/.gradle/caches/artifacts-26/filestore/org.springframework/spring-beans/3.2.3.RELEASE/jar/a48eb92ef51e0aed7d23dcaa54225b8f24808db4/spring-beans-3.2.3.RELEASE.jar">
+			<dependency-type>uses</dependency-type>
+		</dependent-module>
+	</wb-module>
+</project-modules>

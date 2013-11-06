@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="Simplicity Itself"/>
+
+    <title>Mike and Tracy's Big Fat Greek Honeymoon</title>
+
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+    </link>
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+    </style>
+    <!-- See http://twitter.github.com/bootstrap/scaffolding.html#responsive -->
+    <link href="/resources/css/bootstrap-responsive.min.css" rel="stylesheet">
+    </link>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <link href="/resources/css/custom.css" rel="stylesheet">
+    </link>
+</head>
+<body>
+<!-- {!begin layout} -->
+<div th:include="layout :: head"></div>
+<!-- {!end layout} -->
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2">
+		</div>
+		
+		<div class="span8">
+
+			<div th:if="${message}"
+                 th:text="${message}"
+                 id="message" class="alert alert-info">
+            </div>
+
+            <div class="alert alert-info">
+                Add or remove items from the list.
+            </div>
+            
+            <form method="POST" th:object="${menuItem}">
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" th:field="*{name}" /></td>
+                        <td th:if="${#fields.hasErrors('name')}"><p th:errors="*{name}">Invalid Name</p></td>
+                    </tr>
+
+                    <tr>
+                        <td>Description:</td>
+                        <td><input type="text" th:field="*{description}" /></td>
+                        <td th:if="${#fields.hasErrors('description')}"><p th:errors="*{description}">Invalid Description</p></td>
+                    </tr>
+                    <tr>
+                        <td>Cost:</td>
+                        <td><input type="text" th:field="*{cost}" /></td>
+                        <td th:if="${#fields.hasErrors('cost')}"><p th:errors="*{cost}">Invalid Cost</p></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" value="Add Item" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Cost</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr th:each="item,status : ${menuItems}">
+                    <td th:text="${item.id}"></td>
+                    <td th:text="${item.name}"></td>
+                    <td th:text="${item.description}"></td>
+                    <td th:text="${item.cost}"></td>
+                    <td>
+                        <form action="/removeMenuItem" method="POST">
+                            <input id="id" name="id" type="hidden" th:value="${item.id}"/>
+                            <!-- <input id="name" name="name" type="hidden" th:value="${item.name}"/>
+                            <input id="description" name="description" type="hidden"
+                                   th:value="${item.description}"/>
+                            <input id="cost" name="cost" type="hidden" th:value="${item.cost}"/> -->
+                            <input type="submit" value="Remove"/>
+                        </form>
+                    </td>
+
+                </tr>
+                <!-- This example data will be removed by thmyeleafe during processing and replaced with the rows generated above -->
+                <tr th:remove="all">
+                    <td>1</td>
+                    <td>Beach Trip</td>
+                    <td>Trip to the beach!</td>
+                    <td>$100</td>
+                </tr>
+                </tbody>
+            </table>
+            
+            
+            
+            <div class="alert alert-info">
+                Add or remove an album.
+            </div>
+            
+            <form action="/albums" method="POST" th:object="${album}">
+                <table>
+                    <tr>
+                        <td>Title:</td>
+                        <td><input type="text" th:field="*{title}" /></td>
+                        <td th:if="${#fields.hasErrors('title')}"><p th:errors="*{title}">Invalid Title</p></td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td><input type="text" th:field="*{description}" /></td>
+                        <td th:if="${#fields.hasErrors('description')}"><p th:errors="*{description}">Invalid Description</p></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="submit" value="Create an Album" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Cover Photo</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr th:each="album,status : ${albums}">
+                    <td><a th:href="'/album/' + ${album.id}" th:text="${album.title}"></a></td>
+                    <td><a th:href="'/album/' + ${album.id}" th:text="${album.description}"></a></td>
+                    <td><img alt="" th:src="'http://127.0.0.1/image.php?id=' + ${album.photos[0].thumbId}" th:unless="${#lists.isEmpty(album.photos)}" /></td>
+                    <td>
+                        <form action="/removeAlbum" method="POST">
+                            <input id="id" name="id" type="hidden" th:value="${album.id}"/>
+                            <input type="submit" value="Remove"/>
+                        </form>
+                    </td>
+                </tr>
+                <!-- This example data will be removed by thmyeleafe during processing and replaced with the rows generated above -->
+                <tr th:remove="all">
+                    <td>1</td>
+                    <td>Wedding Pics</td>
+                    <td>Reception</td>
+                    <td>:some image here:</td>
+                </tr>
+                </tbody>
+            </table>
+            
+            <div th:include="layout :: foot"></div>
+
+        </div>
+
+		<div class="span2">
+		</div>
+	</div>
+</div>
+</body>
+</html>
