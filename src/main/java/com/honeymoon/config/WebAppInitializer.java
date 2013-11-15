@@ -14,7 +14,7 @@ public class WebAppInitializer extends
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		return new Class<?>[] { SecurityConfig.class, PersistenceConfig.class,
-				CoreConfig.class, MongoConfiguration.class, JPAConfiguration.class };
+				CoreConfig.class, MongoConfiguration.class};
 	}
   //{!end addToRootContext}
 

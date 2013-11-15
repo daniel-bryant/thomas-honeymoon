@@ -2,23 +2,23 @@ package com.honeymoon.persistence.domain;
 
 import com.honeymoon.events.menu.MenuItemDetails;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
-@Entity(name="MENU_ITEMS")
+@Document(collection = "menu_items")
 public class MenuItem {
 
   @Id
-  @GeneratedValue(strategy=GenerationType.IDENTITY)
-  @Column(name = "ITEM_ID")
   private String id;
   
-  @Column(name = "NAME")
+  @Field("name")
   private String name;
 
-  @Column(name = "DESCRIPTION")
+  @Field("description")
   private String description;
   
-  @Column(name = "COST")
+  @Field("cost")
   private int cost;
   
   public String getId() {

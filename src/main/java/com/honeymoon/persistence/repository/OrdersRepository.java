@@ -2,10 +2,10 @@ package com.honeymoon.persistence.repository;
 
 import com.honeymoon.persistence.domain.Order;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface OrdersRepository extends CrudRepository<Order, String> {
+public interface OrdersRepository extends MongoRepository<Order, String> {
 
-  Order findById(String id);
+  public Order findById(String id);
   
 }

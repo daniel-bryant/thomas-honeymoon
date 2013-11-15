@@ -13,9 +13,6 @@ import com.honeymoon.events.albums.AlbumDetails;
 import com.honeymoon.events.albums.AlbumDetailsEvent;
 import com.honeymoon.events.albums.AllAlbumsEvent;
 import com.honeymoon.events.albums.Photo;
-import com.honeymoon.events.images.ImageCreatedEvent;
-import com.honeymoon.events.images.ImageDetails;
-import com.honeymoon.events.images.ImageDetailsEvent;
 import com.honeymoon.events.menu.AllMenuItemsEvent;
 import com.honeymoon.events.menu.MenuItemCreatedEvent;
 import com.honeymoon.events.menu.MenuItemDetails;
@@ -121,17 +118,4 @@ public class WebDataFixture {
 	public static AlbumDetails standardAlbumDetails(UUID id) {
 		return new AlbumDetails(id.toString(), ALBUM_TITLE, ALBUM_DESC, PHOTOS);
 	}
-	
-	public static ImageCreatedEvent newImage(String id) {
-		return new ImageCreatedEvent(id, new ImageDetails());
-	}
-	
-	public static ImageDetailsEvent newImageDetails(String id, byte[] bytes) {
-		return new ImageDetailsEvent(id, imageDetails(id, bytes));
-	}
-	
-	public static ImageDetails imageDetails(String id, byte[] bytes) {
-		return new ImageDetails(id, bytes);
-	}
-
 }

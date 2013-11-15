@@ -1,8 +1,9 @@
 package com.honeymoon.persistence.integration;
 
-import com.honeymoon.config.JPAConfiguration;
+import com.honeymoon.config.MongoConfiguration;
 import com.honeymoon.persistence.domain.Order;
 import com.honeymoon.persistence.repository.OrdersRepository;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {JPAConfiguration.class})
+@ContextConfiguration(classes = {MongoConfiguration.class})
 @Transactional
 @TransactionConfiguration(defaultRollback = true)
 public class OrdersRepositoryIntegrationTests {

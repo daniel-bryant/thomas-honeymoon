@@ -82,7 +82,6 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Name</th>
                     <th>Description</th>
                     <th>Cost</th>
@@ -92,7 +91,6 @@
                 <tbody>
 
                 <tr th:each="item,status : ${menuItems}">
-                    <td th:text="${item.id}"></td>
                     <td th:text="${item.name}"></td>
                     <td th:text="${item.description}"></td>
                     <td th:text="${item.cost}"></td>

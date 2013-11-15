@@ -11,12 +11,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.honeymoon.config.JPAConfiguration;
+import com.honeymoon.config.MongoConfiguration;
 import com.honeymoon.persistence.domain.MenuItem;
 import com.honeymoon.persistence.repository.MenuItemRepository;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {JPAConfiguration.class})
+@ContextConfiguration(classes = {MongoConfiguration.class})
 @Transactional
 @TransactionConfiguration(defaultRollback = true)
 public class MenuItemRepositoryIntegrationTests {

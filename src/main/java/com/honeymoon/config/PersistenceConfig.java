@@ -3,8 +3,6 @@ package com.honeymoon.config;
 import com.honeymoon.persistence.repository.*;
 import com.honeymoon.persistence.services.AlbumPersistenceEventHandler;
 import com.honeymoon.persistence.services.AlbumPersistenceService;
-import com.honeymoon.persistence.services.ImagePersistenceEventHandler;
-import com.honeymoon.persistence.services.ImagePersistenceService;
 import com.honeymoon.persistence.services.MenuPersistenceEventHandler;
 import com.honeymoon.persistence.services.MenuPersistenceService;
 import com.honeymoon.persistence.services.OrderPersistenceEventHandler;
@@ -47,11 +45,6 @@ public class PersistenceConfig {
 	@Bean
 	public AlbumPersistenceService albumPersistenceService(AlbumRepository albumRepository) {
 		return new AlbumPersistenceEventHandler(albumRepository);
-	}
-	
-	@Bean
-	public ImagePersistenceService imagePersistenceService() {
-		return new ImagePersistenceEventHandler();
 	}
 	
 	/*private Map<String, MenuItem> defaultMenu() {
